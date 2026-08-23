@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>행동 쑥쑥 카운터</title>
+    <meta name="description" content="목표 행동을 버튼 한 번으로 세고 추이를 그래프로 확인합니다. 기록은 기기 안에만 저장됩니다." />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" href="./icon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="./icon-192.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- 카카오톡·문자 미리보기. og:image는 절대 주소여야 읽힌다.
+         이미지에 글자를 넣지 않는다 — 제목·설명이 아래에 텍스트로 붙는다. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="행동 쑥쑥 카운터" />
+    <meta property="og:description" content="목표 행동을 버튼 한 번으로 세고 추이를 그래프로 확인합니다. 기록은 기기 안에만 저장됩니다." />
+    <meta property="og:url" content="https://counter.moon-sun.kr/" />
+    <meta property="og:image" content="https://counter.moon-sun.kr/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -1063,6 +1082,14 @@
             switchView('home'); 
         });
 
+    </script>
+    <script>
+      // 서비스워커 등록. 실패해도 앱은 그대로 동작한다.
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+        });
+      }
     </script>
 </body>
 </html>
