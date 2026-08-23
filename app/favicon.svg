@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 새싹. 행동이 쌓여 자라는 것을 나타낸다.
+       여백을 최소로 둔다 — 16px로 줄어들면 여백만큼 도형이 작아진다. -->
+  <rect width="32" height="32" rx="7" fill="#4f46e5"/>
+  <path d="M16 26V13" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M16 15c0-3.9-2.9-7-6.5-7C9.5 12.3 12.3 15 16 15z" fill="#34d399"/>
+  <path d="M16 17c0-3.9 2.9-7 6.5-7C22.5 14.3 19.7 17 16 17z" fill="#6ee7b7"/>
+</svg>

@@ -1,0 +1,11 @@
+# Cloudflare Workers — 정적 자산만 서빙한다.
+# 빌드 도구가 없는 1단계 앱이다. app/ 안의 파일이 그대로 나간다.
+
+name = "counter"
+compatibility_date = "2026-08-23"
+
+[assets]
+directory = "./app"
+
+# 페이지가 index.html 하나뿐이라 SPA 폴백이 필요 없다.
+not_found_handling = "404-page"

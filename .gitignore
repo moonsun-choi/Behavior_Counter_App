@@ -1,0 +1,10 @@
+# 설계 문서는 공개 저장소에 올리지 않는다
+# 로컬에는 그대로 두고 Claude Code가 읽는다. 앞의 /는 루트 파일만 잡는다.
+/CLAUDE.md
+/PRD.md
+/SPEC.md
+
+node_modules/
+dist/
+.DS_Store
+*.log
